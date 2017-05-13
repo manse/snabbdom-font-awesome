@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "strictNullChecks": false,
+        "declaration": false,
+        "removeComments": false,
+        "noUnusedLocals": false,
+        "lib": [
+            "dom",
+            "es5",
+            "es2015.core"
+        ]
+    },
+    "files": [
+        "./src/index.ts"
+    ]
+}

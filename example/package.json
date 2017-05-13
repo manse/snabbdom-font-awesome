@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.3.0",
+    "snabbdom": "^0.6.7",
+    "tsify": "^3.0.1",
+    "typescript": "^2.3.2"
+  },
+  "scripts": {
+    "build": "node bin/build"
+  }
+}
