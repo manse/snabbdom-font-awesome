@@ -4,6 +4,7 @@ var htmlToHs = require('html-to-hyperscript').htmlToHs;
 var parseString = require('xml2js').parseString;
 var beautify = require('js-beautify').js_beautify;
 var camelCase = require('camelcase');
+var R = require('ramda');
 var path = {
     svgFont: './node_modules/font-awesome/fonts/fontawesome-webfont.svg',
     less: './node_modules/font-awesome/less/variables.less'
@@ -48,7 +49,12 @@ function buildScript(svgs) {
     source += "import {VNode} from 'snabbdom/vnode';";
     source += 'export const fa = {';
     source += svgs.map(function(svg) {
-        var h = htmlToHs({ syntax: 'h' })(svg.code);
+        var h = htmlToHs({
+            syntax: 'h',
+            attributesSelector: function(item) {
+                return R.assocPath(['attrs', item.name], item.value);
+            }
+        })(svg.code);
         return '"' + camelCase(svg.name) + '": (): VNode => ' + h;
     }).join(',');
     source += '};';
