@@ -19,12 +19,12 @@
   "scripts": {
     "build-ts": "node bin/build",
     "pretest": "npm run compile",
-    "compile": "npm run build-ts && tsc",
+    "compile": "tsc",
     "prepublish": "npm run compile"
   },
   "author": "Ryota Mannari",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "camelcase": "^4.1.0",
     "font-awesome": "^4.7.0",
     "html-to-hyperscript": "^0.8.0",
