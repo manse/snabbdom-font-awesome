@@ -1,0 +1,40 @@
+{
+  "name": "snabbdom-font-awesome",
+  "version": "0.0.1",
+  "description": "Draw font-awesome svg with snabbdom",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manse/snabbdom-font-awesome.git"
+  },
+  "homepage": "https://github.com/manse/snabbdom-font-awesome",
+  "keywords": [
+    "font-awesome",
+    "font",
+    "awesome",
+    "svg",
+    "snabbdom"
+  ],
+  "scripts": {
+    "build-ts": "node bin/build",
+    "pretest": "npm run compile",
+    "compile": "npm run build-ts && tsc",
+    "prepublish": "npm run compile"
+  },
+  "author": "Ryota Mannari",
+  "license": "MIT",
+  "devDependencies": {
+    "camelcase": "^4.1.0",
+    "font-awesome": "^4.7.0",
+    "html-to-hyperscript": "^0.8.0",
+    "js-beautify": "^1.6.14",
+    "ramda": "^0.23.0",
+    "svgpath": "^2.2.1",
+    "typescript": "^2.3.2",
+    "xml2js": "^0.4.17"
+  },
+  "dependencies": {
+    "snabbdom": "^0.6.7"
+  }
+}
