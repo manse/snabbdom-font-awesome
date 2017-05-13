@@ -1,6 +1,6 @@
 {
   "name": "snabbdom-font-awesome",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Draw font-awesome svg with snabbdom",
   "main": "index.js",
   "typings": "index.d.ts",
