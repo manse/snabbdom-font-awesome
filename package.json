@@ -18,9 +18,8 @@
   ],
   "scripts": {
     "build-ts": "node bin/build",
-    "pretest": "npm run compile",
-    "compile": "tsc",
-    "prepublish": "npm run compile"
+    "postinstall": "npm run compile",
+    "compile": "tsc"
   },
   "author": "Ryota Mannari",
   "license": "MIT",
